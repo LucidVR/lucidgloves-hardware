@@ -12,7 +12,9 @@ void setup() {
     comm = new SerialCommunication();
   #elif COMMUNICATION == COMM_BTSERIAL
     comm = new BTSerialCommunication();
-  #endif  
+  #elif COMMUNICATION == COMM_WIFISERIAL
+    comm = new WIFISerialCommunication();
+  #endif
   comm->start();
 
   setupInputs();
